@@ -1,0 +1,49 @@
+package com.caua.nivel1;
+
+import java.util.Scanner;
+
+public class nivel1 {
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+
+		double notas = 0;
+		double soma = 0;
+		int q = 0;
+
+		while (true) {
+
+			System.out.println("Digite uma nota ou -1 para encerrar:");
+			notas = in.nextDouble();
+
+			if (notas == -1) {
+
+				break;
+
+			}
+
+			if (notas > 10 || notas < 0) {
+
+				System.out.println("Nota inválida!\n");
+				continue;
+
+			}
+
+			soma += notas;
+			++q;
+
+		}
+
+		if (q > 0) {
+
+			System.out.println("Média: " + soma / q);
+
+		} else {
+
+			System.out.println("Nenhuma nota válida foi inserida.");
+
+		}
+
+	}
+}
